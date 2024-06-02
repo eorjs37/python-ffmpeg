@@ -1,0 +1,4 @@
+.ipynb_checkpoints
+.venv
+*.ts
+*.m3u8

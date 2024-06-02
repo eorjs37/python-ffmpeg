@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <video id="video" controls autoplay muted playsinline></video>
+    <script>
+      const src =
+        "https://daegeon-everybody.s3.ap-northeast-2.amazonaws.com/m3u8/lauv/music.m3u8";
+      const videoObject = {
+        video: null,
+        hls: null,
+        setVideoInit() {
+          if (Hls.isSupported()) {
+            this.hls = new Hls({
+              autoStartLoad: false,
+            });
+            this.hls.loadSource(src);
+            this.hls.attachMedia(this.video);
+            this.hls.startLoad(-1);
+          }
+        },
+        setVideo() {
+          this.video = document.querySelector("#video");
+        },
+        getVideo() {
+          return this.video;
+        },
+        onPlay() {
+          console.log("onPlay");
+          this.setVideoInit();
+        },
+        onPause() {
+          console.log("onPause");
+          this.video.pause();
+        },
+      };
+
+      window.addEventListener("load", () => {
+        videoObject.setVideo();
+        videoObject.setVideoInit();
+      });
+    </script>
+  </body>
+</html>

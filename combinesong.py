@@ -11,10 +11,12 @@ f = open('songlist.txt','w')
 pwd = os.getcwd()
 
 for entry in sorted(entries):
-    data = 'file'+" '"+pwd+'/video/lauv/'+entry+"'\n"
+    data = 'file'+" '"+pwd+'/video/lauv_codec/'+entry+"'\n"
     f.write(data)
 
-f.close()
+f.close();
+
+ffmpeg.input('video/lauv/1.mp4').output('video/lauv/1_.mp4',**{'c:v': 'libx265'}).run()
 
 # ffmpeg으로 convert
 

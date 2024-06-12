@@ -1,5 +1,0 @@
-file '/Users/choedaegeon/project/python-project/video/lauv/1_.mp4'
-file '/Users/choedaegeon/project/python-project/video/lauv/2_.mp4'
-file '/Users/choedaegeon/project/python-project/video/lauv/3_.mp4'
-file '/Users/choedaegeon/project/python-project/video/lauv/4_.mp4'
-file '/Users/choedaegeon/project/python-project/video/lauv/5_.mp4'

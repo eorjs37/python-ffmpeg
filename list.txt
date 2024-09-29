@@ -1,2 +1,5 @@
-file video/lauv/1_.mp4
-file video/lauv/2.mp4
+file video/lauv_codec/1_.mp4
+file video/lauv_codec/2_.mp4
+file video/lauv_codec/3_.mp4
+file video/lauv_codec/4_.mp4
+file video/lauv_codec/5_.mp4

@@ -12,6 +12,12 @@ def changeCodec():
     # 리스트 불러오기
     root = os.getcwd()+'/video'
     ffmpeg.input(root+'/lauv'+'/1_.mp4').output(root+'/ENCODING_FOLDER'+'/1__.mp4',vcodec='libx264').run()
-    
+
+# video concat
+def concatVideo():
+    cmd = "ffmpeg -safe 0 -f concat -i list.txt -c copy video/lauv2.mp4"
+    os.system(cmd)
+        
 mkdir()
-changeCodec()
+# changeCodec()
+concatVideo()

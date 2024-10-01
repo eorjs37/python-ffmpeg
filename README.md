@@ -2,7 +2,7 @@
 
 ## codec 맞추기
 ```
-ffmpeg -i video/lauv/3.mp4 -c:v libx264 video/lauv/3_.mp4
+ffmpeg -i video/lauv/3.mp4 -c:v libx264 -c:a aac video/lauv/3_.mp4
 ```
 
 ## concat 
